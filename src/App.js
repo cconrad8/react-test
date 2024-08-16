@@ -9,6 +9,7 @@ import GettingStarted from './pages/GettingStarted';
 import Installation from './pages/Installation';
 import Usage from './pages/Usage';
 import Api from './pages/Api';
+import ContactForm from './pages/ContactForm';
 import './App.css';
 
 function App() {
@@ -18,13 +19,16 @@ function App() {
         <Header />
         <div className="main">
           <Sidebar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/getting-started" element={<GettingStarted />} />
-            <Route path="/installation" element={<Installation />} />
-            <Route path="/usage" element={<Usage />} />
-            <Route path="/api" element={<Api />} />
-          </Routes>
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/getting-started" element={<GettingStarted />} />
+              <Route path="/installation" element={<Installation />} />
+              <Route path="/usage" element={<Usage />} />
+              <Route path="/api" element={<Api />} />
+              <Route path="/contact" element={<ContactForm />} />
+            </Routes>
+          </div>
         </div>
         <Footer />
       </div>
