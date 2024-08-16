@@ -1,0 +1,13 @@
+/* src/components/Content.css */
+.content {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .content section {
+    margin-bottom: 2rem;
+  }
+
+  .content h2 {
+    color: #282c34;
+  }
