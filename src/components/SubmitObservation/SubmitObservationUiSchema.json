@@ -1,0 +1,38 @@
+{
+  "firstName": {
+    "ui:placeholder": "Enter your first name"
+  },
+  "lastName": {
+    "ui:placeholder": "Enter your last name"
+  },
+  "institution": {
+    "ui:placeholder": "Enter your institution name"
+  },
+  "animalModel": {
+    "ui:placeholder": "Enter the name of the animal model"
+  },
+  "observations": {
+    "items": {
+      "browser": {
+        "ui:widget": "select", 
+        "ui:placeholder": "Select an observation type",
+        "ui:help": "Select the type of observation from the list."
+      },
+      "details": {
+        "ui:widget": "textarea",
+        "ui:placeholder": "Enter details of the observation",
+        "ui:options": {
+          "rows": 5
+        }
+      },
+      "Reference Publication": {
+        "ui:placeholder": "Enter publication DOI"
+      }
+    },
+    "ui:options": {
+      "orderable": true,
+      "addable": true,
+      "removable": true
+    }
+  }
+}

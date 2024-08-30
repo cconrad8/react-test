@@ -1,0 +1,68 @@
+{
+  "title": "Submission Form for Observations",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "title": "First name"
+    },
+    "lastName": {
+      "type": "string",
+      "title": "Last name"
+    },
+    "institution": {
+      "type": "string",
+      "title": "Institution",
+      "default": ""
+    },
+    "animalModel": {
+      "type": "string",
+      "title": "Name of Animal Model",
+      "default": ""
+    },
+    "observations": {
+      "type": "array",
+      "title": "Add Observations",
+      "items": {
+        "type": "object",
+        "properties": {
+          "browser": {
+            "type": "string",
+            "title": "Observation Type",
+            "enum": [
+              "Body Length",
+              "Body Weight",
+              "Coat Color",
+              "Depositor Comment",
+              "Disease Susceptibility",
+              "Feed Intake",
+              "Feeding Behavior",
+              "General Comment or Review",
+              "Growth Rate",
+              "Issue",
+              "Lifespan",
+              "Motor Activity",
+              "Organ Development",
+              "Other",
+              "Reflex Development",
+              "Reproductive Behavior",
+              "Social Behavior",
+              "Swimming Behavior",
+              "Tumor Growth",
+              "Usage Instructions"
+            ]
+          },
+          "details": {
+            "type": "string",
+            "title": "Observation Details"
+          },
+          "Reference Publication": {
+            "type": "string",
+            "title": "Publication Reference"
+          }
+        }
+      }
+    }
+  }
+}
