@@ -1,13 +1,26 @@
 /* src/components/Content.css */
 .content {
-    flex: 1;
-    padding: 1rem;
+  flex: 1;
+  padding: 1rem;
+}
+
+.content section {
+  margin-bottom: 2rem;
+}
+
+.content h2 {
+  color: #282c34;
+  font-size: 1.5rem; /* Adjust font size for headings */
+  margin-bottom: 1rem; /* Add space below headings */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    padding: 0.5rem;
   }
 
   .content section {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
-
-  .content h2 {
-    color: #282c34;
-  }
+}

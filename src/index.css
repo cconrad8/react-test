@@ -1,10 +1,36 @@
+/* index.css */
+
+/* Remove default margin */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box; /* Ensures consistent box-sizing across the app */
 }
 
+/* Apply border-box to all elements for consistency */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Optional: Set a default background color for the app */
+body {
+  background-color: #f7fafc; /* Light gray color (Chakra's default background) */
+}
+
+/* Code blocks and inline code styling */
 code {
   font-family: 'Courier New', Courier, monospace; /* Standard monospace font stack */
+  background-color: #f5f5f5; /* Light gray background for code blocks */
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
 }
+
+/* Optional: Adjust default margins/paddings for certain elements */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add any additional global styles you might need */

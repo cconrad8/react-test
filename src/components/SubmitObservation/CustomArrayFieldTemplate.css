@@ -1,0 +1,23 @@
+/* CustomArrayFieldTemplate.css */
+
+/* Styling for the overall array field */
+.array-field {
+  width: 100%;
+}
+
+/* Styling for each array item */
+.array-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+
+/* Ensure the button text is white and the background is blue */
+.array-item-buttons button {
+  color: white !important;
+  background-color: #3182ce !important; /* Chakra UI blue color */
+  font-size: inherit;
+  text-align: center;
+  visibility: visible;
+}

@@ -1,0 +1,355 @@
+{
+  "choiceList": {
+    "ui:widget": "select",
+    "ui:options": {
+      "label": "I would like to submit a:"
+    }
+  },
+  "cellLine": {
+    "ui:options": {
+      "display": "block"
+    },
+    "name": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the name of the cell line?"
+      }
+    },
+    "synonyms": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "Are there synonyms for the cell line's name?"
+      }
+    },
+    "origin": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "label": "Please describe the origin of the cell line in ~20 words."
+      }
+    },
+    "tissue": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What tissue does this cell line originate from?"
+      }
+    },
+    "cancerType": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "If this is a cancer cell, what type is it?"
+      }
+    },
+    "geneticMutation": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "Does this cell line have a genetic mutation?"
+      }
+    },
+    "species": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What is the cell line's species?"
+      }
+    },
+    "age": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What is the age of the donor?"
+      }
+    },
+    "sex": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What is the sex?"
+      }
+    }
+  },
+  "geneticReagent": {
+    "ui:options": {
+      "display": "block"
+    },
+    "name": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the name of the genetic reagent?"
+      }
+    },
+    "synonyms": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "Are there any synonyms for it?"
+      }
+    },
+    "shortDescription": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What's a short description of this genetic reagent (~20 words)?"
+      }
+    }
+  },
+  "antibody": {
+    "ui:options": {
+      "display": "block"
+    },
+    "name": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the name of the antibody?"
+      }
+    },
+    "synonyms": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "Are there any synonyms for this name?"
+      }
+    },
+    "targetAntigen": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the target antigen?"
+      }
+    },
+    "clonality": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the clonality?"
+      }
+    },
+    "hostSpecies": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What is the host species?"
+      }
+    },
+    "reactiveSpecies": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What is the reactive species?"
+      }
+    },
+    "conjugated": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "Is the antibody conjugated?"
+      }
+    }
+  },
+  "biobank": {
+    "ui:options": {
+      "display": "block"
+    },
+    "name": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the biobank name?"
+      }
+    },
+    "synonyms": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "Are there any synonyms for it?"
+      }
+    },
+    "url": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the biobank URL?"
+      }
+    },
+    "description": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "label": "Can you provide a short description of the biobank?"
+      }
+    },
+    "specimens": {
+      "ui:widget": "checkboxes",
+      "ui:options": {
+        "label": "Check any specimens in the biobank:"
+      }
+    },
+    "specimenFormat": {
+      "ui:widget": "checkboxes",
+      "ui:options": {
+        "label": "Check the specimen format:"
+      }
+    },
+    "specimenTissueTypes": {
+      "ui:widget": "checkboxes",
+      "ui:options": {
+        "label": "Check any specimen tissue types in the biobank:"
+      }
+    },
+    "specimenTumorTypes": {
+      "ui:widget": "checkboxes",
+      "ui:options": {
+        "label": "Check any specimen tumor types in the biobank:"
+      }
+    },
+    "diseaseTypes": {
+      "ui:widget": "checkboxes",
+      "ui:options": {
+        "label": "Check any Disease Types in the biobank:"
+      }
+    },
+    "specimenPreparationMethods": {
+      "ui:widget": "checkboxes",
+      "ui:options": {
+        "label": "Check any specimen preparation methods:"
+      }
+    }
+  },
+  "animalModel": {
+    "ui:options": {
+      "display": "block"
+    },
+    "name": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the name of the animal model?"
+      }
+    },
+    "synonyms": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "Are there any synonyms?"
+      }
+    },
+    "description": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "label": "Please provide a description of the animal model (~20 words)"
+      }
+    },
+    "backgroundStrain": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the background strain?"
+      }
+    },
+    "backgroundSubstrain": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the background substrain?"
+      }
+    },
+    "strainNomenclature": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the strain nomenclature?"
+      }
+    },
+    "disease": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What is the animal model disease?"
+      }
+    },
+    "manifestation": {
+      "ui:widget": "checkboxes",
+      "ui:options": {
+        "label": "What is the animal model of manifestation?"
+      }
+    }
+  },
+  "moreSpecifics": {
+    "ui:options": {
+      "display": "block"
+    },
+    "mutationTypes": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "Do any of the mutation types apply?"
+      }
+    },
+    "alleleType": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What is the allele type?"
+      }
+    },
+    "mutationMethod": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What is the method mutation was applied?"
+      }
+    },
+    "affectedGeneSymbol": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the Affected Gene Symbol?"
+      }
+    },
+    "affectedGeneName": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the Affected Gene Name?"
+      }
+    },
+    "chromosomeNumber": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "What chromosome number is the affected gene?"
+      }
+    },
+    "proteinVariation": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the protein variation?"
+      }
+    },
+    "sequenceVariation": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the sequence variation?"
+      }
+    }
+  },
+  "finalQuestions": {
+    "ui:options": {
+      "display": "block"
+    },
+    "investigatorName": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the investigator's name who developed this tool?"
+      }
+    },
+    "investigatorAffiliation": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the investigator's affiliation who developed this tool?"
+      }
+    },
+    "doiLink": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "If there is a publication associated with the development of this tool, please include the doi link below:"
+      }
+    },
+    "acquisitionMethod": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "How can one acquire this item?"
+      }
+    },
+    "vendor": {
+      "ui:widget": "select",
+      "ui:options": {
+        "label": "Please select a vendor you are aware has this item:"
+      }
+    },
+    "catalogNumber": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the catalog number?"
+      }
+    },
+    "catalogURL": {
+      "ui:widget": "text",
+      "ui:options": {
+        "label": "What is the catalog URL?"
+      }
+    }
+  }
+}

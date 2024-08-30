@@ -1,5 +1,5 @@
 {
-  "title": "Submission Form for Observations",
+  "title": "Submission Form for NF Tools",
   "type": "object",
   "required": [],
   "properties": {
@@ -57,9 +57,13 @@
             "type": "string",
             "title": "Observation Details"
           },
-          "Reference Publication": {
+          "referencePublication": {
             "type": "string",
             "title": "Publication Reference"
+          },
+          "fileUpload": {
+            "type": "string",
+            "title": "Associated File"
           }
         }
       }
