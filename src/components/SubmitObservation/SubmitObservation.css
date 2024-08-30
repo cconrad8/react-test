@@ -1,0 +1,79 @@
+/* Container styling for the contact form */
+.contact-form-container {
+  max-width: 50%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Heading styling */
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form layout styling */
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.contact-form-container label {
+  margin-bottom: 5px;
+}
+
+/* Input, select, and textarea field styling */
+.contact-form-container input,
+.contact-form-container select,
+.contact-form-container textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* General button styling */
+.contact-form-container button,
+.array-item-buttons button,
+.array-item-add button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  margin: 5px;
+}
+
+/* Hover effect for buttons */
+.contact-form-container button:hover,
+.array-item-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Hover effect for the add button */
+.array-item-add button:hover {
+  background-color: #081749;
+}
+
+/* Responsive design adjustments */
+@media (min-width: 768px) {
+  .contact-form-container {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-form-container {
+    max-width: 50%;
+  }
+}

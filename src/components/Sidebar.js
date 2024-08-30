@@ -12,7 +12,7 @@ function Sidebar() {
         <li><Link to="/installation">Installation</Link></li>
         <li><Link to="/usage">Usage</Link></li>
         <li><Link to="/api">API Reference</Link></li>
-        <li><Link to="/contact">Contact Us</Link></li>
+        <li><Link to="/submit-observation">Submit Observation</Link></li>
       </ul>
     </aside>
   );
