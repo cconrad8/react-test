@@ -1,0 +1,216 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Form Schema",
+  "type": "object",
+  "properties": {
+    "choiceList": {
+      "type": "string",
+      "enum": ["Cell Line", "Genetic Reagent", "Antibody", "Biobank", "Animal Model"],
+      "description": "I would like to submit a:"
+    },
+    "cellLine": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "title": "What is the name of the cell line?" },
+        "synonyms": { "type": "string", "title": "Are there synonyms for the cell line's name?" },
+        "origin": { "type": "string", "title": "Please describe the origin of the cell line in ~20 words.", "maxLength": 200 },
+        "tissue": { 
+          "type": "string", 
+          "enum": ["Tissue A", "Tissue B", "Tissue C"], 
+          "title": "What tissue does this cell line originate from?" 
+        },
+        "cancerType": { 
+          "type": "string", 
+          "enum": ["Type A", "Type B", "Type C"], 
+          "title": "If this is a cancer cell, what type is it?" 
+        },
+        "geneticMutation": { 
+          "type": "string", 
+          "enum": ["Yes", "No"], 
+          "title": "Does this cell line have a genetic mutation?" 
+        },
+        "species": {
+          "type": "string",
+          "enum": ["Species A", "Species B", "Species C"],
+          "title": "What is the cell line's species?"
+        },
+        "age": {
+          "type": "string",
+          "enum": ["Age A", "Age B", "Age C"],
+          "title": "What is the age of the donor?"
+        },
+        "sex": { 
+          "type": "string", 
+          "enum": ["Male", "Female", "Other"], 
+          "title": "What is the sex?" 
+        }
+      },
+      "if": { "properties": { "choiceList": { "const": "Cell Line" } } },
+      "then": { "$ref": "#/properties/cellLine" }
+    },
+    "geneticReagent": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "title": "What is the name of the genetic reagent?" },
+        "synonyms": { "type": "string", "title": "Are there any synonyms for it?" },
+        "shortDescription": { "type": "string", "title": "What's a short description of this genetic reagent (~20 words)?", "maxLength": 200 }
+      },
+      "if": { "properties": { "choiceList": { "const": "Genetic Reagent" } } },
+      "then": { "$ref": "#/properties/geneticReagent" }
+    },
+    "antibody": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "title": "What is the name of the antibody?" },
+        "synonyms": { "type": "string", "title": "Are there any synonyms for this name?" },
+        "targetAntigen": { "type": "string", "title": "What is the target antigen?" },
+        "clonality": { "type": "string", "title": "What is the clonality?" },
+        "hostSpecies": {
+          "type": "string",
+          "enum": ["Species A", "Species B", "Species C"],
+          "title": "What is the host species?"
+        },
+        "reactiveSpecies": {
+          "type": "string",
+          "enum": ["Species A", "Species B", "Species C"],
+          "title": "What is the reactive species?"
+        },
+        "conjugated": { 
+          "type": "string", 
+          "enum": ["Yes", "No"], 
+          "title": "Is the antibody conjugated?" 
+        }
+      },
+      "if": { "properties": { "choiceList": { "const": "Antibody" } } },
+      "then": { "$ref": "#/properties/antibody" }
+    },
+    "biobank": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "title": "What is the biobank name?" },
+        "synonyms": { "type": "string", "title": "Are there any synonyms for it?" },
+        "url": { "type": "string", "format": "uri", "title": "What is the biobank URL?" },
+        "description": { "type": "string", "title": "Can you provide a short description of the biobank?", "maxLength": 200 },
+        "specimens": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["Specimen A", "Specimen B", "Specimen C"] },
+          "title": "Check any specimens in the biobank:"
+        },
+        "specimenFormat": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["Format A", "Format B", "Format C"] },
+          "title": "Check the specimen format:"
+        },
+        "specimenTissueTypes": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["Tissue A", "Tissue B", "Tissue C"] },
+          "title": "Check any specimen tissue types in the biobank:"
+        },
+        "specimenTumorTypes": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["Tumor A", "Tumor B", "Tumor C"] },
+          "title": "Check any specimen tumor types in the biobank:"
+        },
+        "diseaseTypes": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["Disease A", "Disease B", "Disease C"] },
+          "title": "Check any Disease Types in the biobank:"
+        },
+        "specimenPreparationMethods": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["Method A", "Method B", "Method C"] },
+          "title": "Check any specimen preparation methods:"
+        }
+      },
+      "if": { "properties": { "choiceList": { "const": "Biobank" } } },
+      "then": { "$ref": "#/properties/biobank" }
+    },
+    "animalModel": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "title": "What is the name of the animal model?" },
+        "synonyms": { "type": "string", "title": "Are there any synonyms?" },
+        "description": { "type": "string", "title": "Please provide a description of the animal model (~20 words)", "maxLength": 200 },
+        "backgroundStrain": { "type": "string", "title": "What is the background strain?" },
+        "backgroundSubstrain": { "type": "string", "title": "What is the background substrain?" },
+        "strainNomenclature": { "type": "string", "title": "What is the strain nomenclature?" },
+        "disease": {
+          "type": "string",
+          "enum": ["Disease A", "Disease B", "Disease C"],
+          "title": "What is the animal model disease?"
+        },
+        "manifestation": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["Manifestation A", "Manifestation B", "Manifestation C"] },
+          "title": "What is the animal model of manifestation?"
+        }
+      },
+      "if": { "properties": { "choiceList": { "const": "Animal Model" } } },
+      "then": { "$ref": "#/properties/animalModel" }
+    },
+    "moreSpecifics": {
+      "type": "object",
+      "properties": {
+        "mutationTypes": {
+          "type": "string",
+          "enum": ["Mutation Type A", "Mutation Type B", "Mutation Type C"],
+          "title": "Do any of the mutation types apply?"
+        },
+        "alleleType": {
+          "type": "string",
+          "enum": ["Allele Type A", "Allele Type B", "Allele Type C"],
+          "title": "What is the allele type?"
+        },
+        "mutationMethod": {
+          "type": "string",
+          "enum": ["Method A", "Method B", "Method C"],
+          "title": "What is the method mutation was applied?"
+        },
+        "affectedGeneSymbol": { "type": "string", "title": "What is the Affected Gene Symbol?" },
+        "affectedGeneName": { "type": "string", "title": "What is the Affected Gene Name?" },
+        "chromosomeNumber": {
+          "type": "string",
+          "enum": ["1", "2", "3", "X", "Y"],
+          "title": "What chromosome number is the affected gene?"
+        },
+        "proteinVariation": { "type": "string", "title": "What is the protein variation?" },
+        "sequenceVariation": { "type": "string", "title": "What is the sequence variation?" }
+      },
+      "if": { "properties": { "choiceList": { "const": "More Specifics" } } },
+      "then": { "$ref": "#/properties/moreSpecifics" }
+    },
+    "finalQuestions": {
+      "type": "object",
+      "properties": {
+        "investigatorName": { "type": "string", "title": "What is the investigator's name who developed this tool?" },
+        "investigatorAffiliation": { "type": "string", "title": "What is the investigator's affiliation who developed this tool?" },
+        "doiLink": { "type": "string", "format": "uri", "title": "If there is a publication associated with the development of this tool, please include the doi link below:" },
+        "acquisitionMethod": {
+          "type": "string",
+          "enum": ["Purchase", "Free", "Other"],
+          "title": "How can one acquire this item?"
+        },
+        "vendor": {
+          "type": "string",
+          "enum": ["Vendor A", "Vendor B", "Vendor C"],
+          "title": "Please select a vendor you are aware has this item:"
+        },
+        "catalogNumber": { "type": "string", "title": "What is the catalog number?" },
+        "catalogURL": { "type": "string", "format": "uri", "title": "What is the catalog URL?" }
+      },
+      "if": { "properties": { "choiceList": { "const": "Final Questions" } } },
+      "then": { "$ref": "#/properties/finalQuestions" }
+    }
+  },
+  "required": ["choiceList"],
+  "oneOf": [
+    { "required": ["cellLine"] },
+    { "required": ["geneticReagent"] },
+    { "required": ["antibody"] },
+    { "required": ["biobank"] },
+    { "required": ["animalModel"] },
+    { "required": ["moreSpecifics"] },
+    { "required": ["finalQuestions"] }
+  ]
+}
+

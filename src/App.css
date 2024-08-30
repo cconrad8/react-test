@@ -12,14 +12,27 @@
 }
 
 .sidebar {
-  width: 250px; /* Fixed width for the sidebar */
-  background-color: #f4f4f4; /* Example sidebar background */
+  width: 250px;
+  background-color: #f4f4f4;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .content {
-  flex: 1; /* Allow content to take up remaining space */
+  flex: 1;
   padding: 20px;
   box-sizing: border-box;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto; /* Adjust height if necessary */
+  }
+
+  .content {
+    flex: none;
+    width: 100%;
+  }
 }

@@ -8,8 +8,9 @@ import GettingStarted from './pages/GettingStarted';
 import Installation from './pages/Installation';
 import Usage from './pages/Usage';
 import Api from './pages/Api';
+import Resource from './pages/Resource'
+import Observation from './pages/Observation';
 import './App.css';
-import SubmitObservation from './components/SubmitObservation/SubmitObservation';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
               <Route path="/installation" element={<Installation />} />
               <Route path="/usage" element={<Usage />} />
               <Route path="/api" element={<Api />} />
-              <Route path="/submit-observation" element={<SubmitObservation />} />
+              <Route path="/submit-observation" element={<Observation />} />
+              <Route path="/submit-resource" element={<Resource />} />
             </Routes>
           </div>
         </div>
